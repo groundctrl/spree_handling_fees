@@ -1,0 +1,7 @@
+<!-- insert_bottom '[data-hook="admin_variant_form_additional_fields"]' -->
+
+<div class="field" data-hook="handling_fee">
+  <%= f.label :handling_fee, Spree.t("handling_fees.handling_fee") %>
+  <% value = number_with_precision(@variant.send(:handling_fee), precision: 2) %>
+  <%= f.text_field :handling_fee, value: value, class: "fullwidth" %>
+</div>

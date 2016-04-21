@@ -1,0 +1,10 @@
+<!-- insert_bottom ".alpha.six.columns" -->
+
+<fieldset class="handling_fee no-border-bottom">
+  <legend align="center"><%= Spree.t("handling_fees.handling_fee")%></legend>
+
+  <div class="field">
+    <%= label_tag(:handling_fee, Spree.t("handling_fees.handling_fee")) %>
+    <%= text_field_tag :handling_fee, Spree::Config.handling_fee, class: "input_integer fullwidth" %>
+  </div>
+</fieldset>

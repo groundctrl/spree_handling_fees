@@ -1,0 +1,18 @@
+AllCops:
+  Include:
+    - Rakefile
+  Exclude:
+    - "db/migrate/**/*"
+    - "spec/dummy/**/*"
+
+LineLength:
+  Max: 80
+
+Documentation:
+  Enabled: false
+
+StringLiterals:
+  EnforcedStyle: double_quotes
+
+StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes

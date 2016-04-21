@@ -1,0 +1,9 @@
+<!-- insert_after '[id="shipping_specs"]' -->
+
+<div data-hook="admin_product_form_handling_fee">
+  <%= f.field_container :handling_fee do %>
+    <%= f.label :handling_fee, Spree.t("handling_fees.handling_fee") %>
+    <%= f.text_field :handling_fee, size: 16 %>
+    <%= f.error_message_on :handling_fee %>
+  <% end %>
+</div>
