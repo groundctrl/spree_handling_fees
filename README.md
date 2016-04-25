@@ -1,6 +1,6 @@
 # SpreeHandlingFees
 
-Handling fee per product variant.
+Handling fee per product variant. While [`spree-contrib/spree_handling_fees`](https://github.com/spree-contrib/spree_handling_fees) adds handling fees per shipment, this will add a handling fee per item that is being shipped.
 
 ## Installation
 
@@ -24,6 +24,20 @@ After installing, run the generator:
 
 ```
 bundle exec rails g spree_handling_fees:install
+```
+
+## Updating
+
+Copy new migrations
+
+```
+rake spree_handling_fees:install:migrations
+```
+
+Run migrations
+
+```
+rake db:migrate
 ```
 
 #### Rake
@@ -57,7 +71,6 @@ bundle exec rake spec
 
 ## TODO
 
-- Insert handling fee into `spree_line_items` for the order
 - Display handling fee in checkout with item
 - Do not charge handling fee if product is not being shipped
 - Allow optional refunding of handling fee during refund/return
