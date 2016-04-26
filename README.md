@@ -72,7 +72,6 @@ bundle exec rake spec
 ## TODO
 
 - Display handling fee in admin
-- Ensure mailers report handling fees and updated total
 - Do not charge handling fee if product is not being shipped
 - Allow optional refunding of handling fee during refund/return
   - Allow partial refunding of handling fee
