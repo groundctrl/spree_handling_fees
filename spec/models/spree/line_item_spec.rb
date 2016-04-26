@@ -1,7 +1,6 @@
 require "spec_helper"
 
 RSpec.describe Spree::LineItem, type: :model do
-
   context "with default handling fee" do
     it "creates line_item with default (0.0) handling fee" do
       variant = create(:variant)
