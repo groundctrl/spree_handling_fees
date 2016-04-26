@@ -54,6 +54,14 @@ bundle exec rake spree:handling_fee:apply
 
 > NOTE: This Rake task does not change the handling fee that was collected on previous orders. It only applies to orders going forward.
 
+## Mailers
+
+Spree uses [Deface](https://github.com/spree/deface) for view overrides. Deface needs structured data to parse the view. It doesn't work well with plain text. This issue is also talked about on [Stack Overflow](http://stackoverflow.com/questions/19145325/spree-deface-email-text-template).
+
+The only thing that can be done is to override the text and HTML views in your application. This is detailed in the wiki [here](https://github.com/groundctrl/spree_handling_fees/wiki/Text-Order-Mailer) (text) and [here](https://github.com/groundctrl/spree_handling_fees/wiki/HTML-Order-Mailer) (HTML).
+
+> NOTE: If you do not do this step, your order mailers will _not_ have a handling fee listed on the receipt and the math will not add up to the purchase total.
+
 ## Testing
 
 Run tests. This will also generate the dummy app.
