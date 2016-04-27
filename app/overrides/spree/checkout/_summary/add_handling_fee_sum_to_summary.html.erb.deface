@@ -2,7 +2,7 @@
 
 <tbody>
   <tr data-hook="handling_fee_total">
-    <td><strong><%= Spree.t("handling_fees.handling_fee") %>:</strong></td>
-    <td><strong><%= order.display_handling_fee_total.to_html %></strong></td>
+    <td><%= Spree.t("handling_fees.handling_fee") %>:</td>
+    <td><%= order.display_handling_fee_total.to_html %></td>
   </tr>
 </tbody>
