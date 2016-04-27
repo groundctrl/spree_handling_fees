@@ -1,0 +1,4 @@
+<!-- insert_before '[data-hook="admin_order_tab_total_title"]' -->
+
+<dt data-hook='admin_order_tab_handling_fee_total_title'><%= Spree.t("handling_fees.handling_fee") %>:</dt>
+<dd id='order_handling_fee_total'><%= @order.display_handling_fee_total.to_html %></dd>
