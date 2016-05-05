@@ -82,7 +82,6 @@ bundle exec rake spec
 - Do not charge handling fee if product is not being shipped
 - Allow optional refunding of handling fee during refund/return
   - Allow partial refunding of handling fee
-- Ensure API returns handling fees and updated total
 - International handling fee
 
 ## Contributing
