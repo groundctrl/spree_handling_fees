@@ -1,0 +1,3 @@
+<!-- insert_after 'thead th:nth-child(3)' -->
+
+<th><%= Spree.t("handling_fees.handling_fee_total") %></th>

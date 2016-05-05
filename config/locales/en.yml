@@ -2,3 +2,4 @@ en:
   spree:
     handling_fees:
       handling_fee: Handling Fee
+      handling_fee_total: Handling Fee Total
