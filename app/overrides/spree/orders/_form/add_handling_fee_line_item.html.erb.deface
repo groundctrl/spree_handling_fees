@@ -1,7 +1,0 @@
-<!-- insert_before 'tr.cart-total' -->
-
-<tr class="cart-handling-fee">
-  <td colspan="4" align='right'><h5><%= Spree.t("handling_fees.handling_fee") %></h5></th>
-  <td colspan><h5><%= order_form.object.display_handling_fee_total %></h5></td>
-  <td></td>
-</tr>

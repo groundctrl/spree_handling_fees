@@ -54,13 +54,19 @@ bundle exec rake spree:handling_fee:apply
 
 > NOTE: This Rake task does not change the handling fee that was collected on previous orders. It only applies to orders going forward.
 
-## Mailers
+## Usage
 
-Spree uses [Deface](https://github.com/spree/deface) for view overrides. Deface needs structured data to parse the view. It doesn't work well with plain text. This issue is also talked about on [Stack Overflow](http://stackoverflow.com/questions/19145325/spree-deface-email-text-template).
-
-The only thing that can be done is to override the text and HTML views in your application. This is detailed in the wiki [here](https://github.com/groundctrl/spree_handling_fees/wiki/Text-Order-Mailer) (text) and [here](https://github.com/groundctrl/spree_handling_fees/wiki/HTML-Order-Mailer) (HTML).
-
-> NOTE: If you do not do this step, your order mailers will _not_ have a handling fee listed on the receipt and the math will not add up to the purchase total.
+1. Log in to the admin (`/admin`)
+2. Click on `Configuration` in the top menu
+3. Click `Tax Rates` from the right side menu
+4. Click the `New Tax Rate` button
+5. Enter `Handling Fee` in the `Name` field
+6. Choose the appropriate `Zone`
+7. Enter `0` in the `Rate` field
+8. Uncheck the `Show rate in label` checkbox
+9. Select `Calculated per item handling fee` from the `Calculator` field
+10. Click the `Create` button
+11. Profit
 
 ## Testing
 
@@ -76,16 +82,6 @@ Or take the longer way around
 bundle exec rake test_app
 bundle exec rake spec
 ```
-
-## TODO
-
-- Display handling fee in admin
-- Do not charge handling fee if product is not being shipped
-- Allow optional refunding of handling fee during refund/return
-  - Allow partial refunding of handling fee
-- Ensure API returns handling fees and updated total
-- Ensure reports return handling fees and updated total
-- International handling fee
 
 ## Contributing
 

@@ -1,8 +1,0 @@
-<!-- insert_before '[data-hook="order_details_tax_adjustments"]' -->
-
-<tbody>
-  <tr data-hook="handling_fee_total">
-    <td><%= Spree.t("handling_fees.handling_fee") %>:</td>
-    <td><%= order.display_handling_fee_total.to_html %></td>
-  </tr>
-</tbody>
