@@ -1,4 +1,8 @@
 en:
   spree:
     handling_fees:
+      calculator_description: Calculated per item handling Fee
       handling_fee: Handling Fee
+      validation:
+        included_in_price: cannot be included in price for handling fee adjustments
+        show_rate_in_label: cannot be shown in label for handling fee adjustments
