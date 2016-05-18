@@ -1,0 +1,8 @@
+<!-- replace_contents "tr.adjustment td:first-child" -->
+
+<%# If any of the adjustment calculator types are 'Spree::Calculator::HandlingFeeCalculator' then remove the `Tax:` prefix %>
+<% if adjustments.any? { |a| a.source.calculator.type == "Spree::Calculator::HandlingFeeCalculator" } %>
+  <h5><%= label %></h5>
+<% else %>
+  <h5><%= type %>: <%= label %></h5>
+<% end %>
