@@ -1,0 +1,8 @@
+<!-- replace_contents "tfoot#tax-adjustments tr.total td:first-child" -->
+
+<%# If any of the adjustment calculator types are 'Spree::Calculator::HandlingFeeCalculator' then remove the `Tax:` prefix %>
+<% if adjustments.any? { |a| a.source.calculator.type == "Spree::Calculator::HandlingFeeCalculator" } %>
+  <strong><%= label %></strong>
+<% else %>
+  <%= Spree.t(:tax) %>: <strong><%= label %></strong>
+<% end %>

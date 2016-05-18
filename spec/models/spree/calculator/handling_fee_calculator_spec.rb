@@ -48,17 +48,14 @@ describe Spree::Calculator::HandlingFeeCalculator, type: :model do
   end
 
   context "#compute_shipment" do
-    it "raises an error" do
-      expect { subject.compute_shipment(order) }.to raise_error(
-        "Spree::Calculator::HandlingFeeCalculator is designed to " \
-        "calculate taxes at the line-item level."
-      )
+    it "should be equal to the item's handling fee * quantity" do
+      expect(calculator.compute_shipment(line_item)).to eq 6.28
     end
   end
 
   context "#compute_line_item" do
     it "should be equal to the item's handling fee * quantity" do
-      expect(calculator.compute(line_item)).to eq 6.28
+      expect(calculator.compute_line_item(line_item)).to eq 6.28
     end
   end
 

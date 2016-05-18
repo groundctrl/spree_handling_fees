@@ -67,6 +67,7 @@ RSpec.feature "Throughout checkout process", type: :feature, js: true do
     # Complete / Receipt
     expect(current_path).to include spree.order_path(Spree::Order.last)
     expect(page).to have_content Spree.t(:order_processed_successfully)
+    expect(page).not_to have_content("#{Spree.t(:tax)}: #{handling_fee_label}")
     expect(page).to have_content handling_fee_label
     expect(page).to have_content calculated_handling_fee
   end
