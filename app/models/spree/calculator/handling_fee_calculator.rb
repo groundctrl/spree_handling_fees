@@ -11,11 +11,13 @@ module Spree
             "calculate taxes at the line-item level."
     end
 
-    def compute_shipment_or_line_item(item)
+    def compute_shipment(_shipment)
+      nil
+    end
+
+    def compute_line_item(item)
       round_to_two_places calculate_handling_fee_for(item)
     end
-    alias_method :compute_shipment, :compute_shipment_or_line_item
-    alias_method :compute_line_item, :compute_shipment_or_line_item
 
     private
 

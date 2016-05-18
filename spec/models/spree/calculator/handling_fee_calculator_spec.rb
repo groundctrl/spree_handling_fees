@@ -48,8 +48,8 @@ describe Spree::Calculator::HandlingFeeCalculator, type: :model do
   end
 
   context "#compute_shipment" do
-    it "should be equal to the item's handling fee * quantity" do
-      expect(calculator.compute_shipment(line_item)).to eq 6.28
+    it "should be nothing" do
+      expect(calculator.compute_shipment(line_item)).to eq nil
     end
   end
 
