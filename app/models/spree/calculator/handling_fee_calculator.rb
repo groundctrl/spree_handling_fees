@@ -12,7 +12,7 @@ module Spree
     end
 
     def compute_shipment(_shipment)
-      nil
+      0
     end
 
     def compute_line_item(item)

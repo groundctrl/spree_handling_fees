@@ -49,7 +49,7 @@ describe Spree::Calculator::HandlingFeeCalculator, type: :model do
 
   context "#compute_shipment" do
     it "should be nothing" do
-      expect(calculator.compute_shipment(line_item)).to eq nil
+      expect(calculator.compute_shipment(line_item)).to eq 0
     end
   end
 
